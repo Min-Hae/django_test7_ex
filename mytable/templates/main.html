@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>부서 정보</h2>
+<table>
+<tr>
+<th>부서번호</th><th>부서명</th><th>부서전화</th><th>지역명</th>
+</tr>
+{%for b in blist %}
+<tr>
+<td>{{b.buser_no}}</td>
+<td><a href="jlist?buser_no={{b.buser_no}}">{{b.buser_name}}</a></td>
+<td>{{b.buser_tel}}</td>
+<td>{{b.buser_loc}}</td>
+</tr>
+
+{%endfor%}
+</table>
+</body>
+</html>

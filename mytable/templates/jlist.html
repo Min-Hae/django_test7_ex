@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>직원 정보</h2>
+<table>
+<tr>
+<th>직원번호</th><th>직원명</th><th>직급</th><th>관리고객</th>
+</tr>
+{%for j in jlist %}
+<tr>
+<td>{{j.jikwon_no}}</td>
+{%if j.count > 0 %}
+<td><a href="glist?jikwon_no={{j.jikwon_no}}">{{j.jikwon_name}}</a></td>
+{%else %}
+<td>{{j.jikwon_name}}</td>
+{%endif%}
+<td>{{j.jikwon_jik}}</td>
+<td>{{j.count}}</td>
+
+</tr>
+{%endfor%}
+</table>
+</body>
+</html>
